@@ -12,7 +12,10 @@ public class ToyShopApp {
         System.out.println("--------toy shop--------");
         System.out.println("1.- add bear");
         System.out.println("2.- add car");
-        System.out.println("3.- display all");
+        System.out.println("3.- add book");
+        System.out.println("4.- add puzzle");
+        System.out.println("5.- display all");
+
         System.out.println("0.- stop");
 
         option = scanner.nextInt();
@@ -53,6 +56,44 @@ public class ToyShopApp {
                     break;
 
                 case 3:
+
+                    System.out.println("Name: ");
+                    name = scanner.nextLine();
+
+                    System.out.println("Price: ");
+                    price = scanner.nextDouble();
+                    scanner.nextLine();
+
+                    System.out.println("Pages: ");
+                    int pages = scanner.nextInt();
+                    scanner.nextLine(); // /n
+
+                    System.out.println("Age: ");
+                    int childAge = scanner.nextInt();
+                    scanner.nextLine(); // n
+
+                    Book book = new Book(name, price, pages, childAge);
+                    toyShop.addBook(book);
+                    break;
+
+                case 4:
+
+                    System.out.println("Name: ");
+                    name = scanner.nextLine();
+
+                    System.out.println("Price: ");
+                    price = scanner.nextDouble();
+                    scanner.nextLine();
+
+                    System.out.println("Elements: ");
+                    int numbersElements = scanner.nextInt();
+                    scanner.nextLine(); // /n
+
+                    Puzzle puzzle = new Puzzle(name, price, numbersElements);
+                    toyShop.addPuzzle(puzzle);
+                    break;
+
+                case 5:
 
                     toyShop.displayAll();
                     break;
