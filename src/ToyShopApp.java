@@ -7,6 +7,7 @@ public class ToyShopApp {
         int option;
         String name;
         double price;
+        ToyShop toyShop = new ToyShop();
         do {
         System.out.println("--------toy shop--------");
         System.out.println("1.- add bear");
@@ -16,26 +17,44 @@ public class ToyShopApp {
 
         option = scanner.nextInt();
         scanner.nextLine();
-        ToyShop toyShop = new ToyShop();
+
 
             switch (option) {
 
                 case 1:
                     System.out.println("Name: ");
                     name = scanner.nextLine();
+
                     System.out.println("Price: ");
                     price = scanner.nextDouble();
                     scanner.nextLine();
+
                     System.out.println("Material: ");
                     String material = scanner.nextLine();
-                    Bear bear = new Bear(name,price,material);
+
+                    Bear bear = new Bear(name, price, material);
                     toyShop.addBear(bear);
                     break;
+
                 case 2:
 
+                    System.out.println("Name: ");
+                    name = scanner.nextLine();
+
+                    System.out.println("Price: ");
+                    price = scanner.nextDouble();
+                    scanner.nextLine();
+
+                    System.out.println("Type: ");
+                    String type = scanner.nextLine();
+
+                    Car car = new Car(name, price, type);
+                    toyShop.addCar(car);
                     break;
+
                 case 3:
 
+                    toyShop.displayAll();
                     break;
             }
 

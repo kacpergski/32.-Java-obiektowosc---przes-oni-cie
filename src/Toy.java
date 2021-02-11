@@ -6,4 +6,12 @@ public class Toy {
         this.name = name;
         this.price = price;
     }
+
+    public void display(){
+
+        System.out.println("Name: " + name);
+        System.out.println("Price: " + price);
+    }
+
+
 }
