@@ -11,6 +11,7 @@ public class Book extends Toy{
     public void display(){
         super.display();
         System.out.println("Pages: " + pages );
+        System.out.println("Age: " + childAge );
 
     }
 }
